@@ -26,7 +26,7 @@ SECRET_KEY = 'b-7-^^fel*y26n587rh4)x$-8b%4cofdnqdjzhq3+=k3b&sd6y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['hydra-chatbot.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['hydra-team.herokuapp.com','127.0.0.1']
 
 
 # Application definition
