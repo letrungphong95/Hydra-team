@@ -11,8 +11,8 @@ $(function(){
             },
             success:function(data){
                 if (data['user_text'].replace(/\s+/g, '') != ''){
-                    tbody.append('<li class="me" style="color:red">' +data['user_text']+ '</li>');
-                    tbody.append('<li class="bot" style="color:blue">' +data['bot_text']+ '</li>');
+                    tbody.append('<li class="me" style="color:red">Me:' +data['user_text']+ '</li>');
+                    tbody.append('<li class="bot" style="color:blue">Bot:' +data['bot_text']+ '</li>');
                     $('#messages').animate({
                         scrollTop: $('#messages')[0].scrollHeight
                     }, 0);
