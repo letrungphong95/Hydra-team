@@ -1,0 +1,32 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="zh-tw">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script type="text/javascript" src="{% static 'js/cookies.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/handler.js' %}"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'css/customized.css' %}" type="text/css">
+        <title>Hydra</title>
+    </head>
+    <body>
+        <ul id="messages">
+        </ul>
+        <div id='form_text'>
+        <form>
+            {% csrf_token %}
+            <input type="submit" value="Sumit" style="float: right" class="btn btn-primary" id="btn_msg" />
+            <div style="overflow: hidden; padding-right: .5em;">
+                <input type="text" id="m" placeholder="Say something..." class="form-control"  />
+            </div>
+        </form>
+        </div>
+        </div>
+    </body>
+</html>
+
