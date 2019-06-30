@@ -1,0 +1,14 @@
+# Configuration for Rasa NLU.
+# https://rasa.com/docs/rasa/nlu/components/
+language: vi
+pipeline: tensorflow_embedding
+
+# Configuration for Rasa Core.
+# https://rasa.com/docs/rasa/core/policies/
+policies:
+  - name: MemoizationPolicy
+  - name: KerasPolicy
+    epoch: 2000
+  - name: MappingPolicy
+  - name: EmbeddingPolicy
+    epoch: 2000

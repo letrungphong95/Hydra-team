@@ -1,0 +1,1134 @@
+INFO:rasa_nlu.training_data.loading:Training data format of ./data/nlu.md is md
+INFO:rasa_nlu.training_data.training_data:Training data stats: 
+	- intent examples: 39 (6 distinct intents)
+	- Found intents: 'goodbye', 'affirm', 'deny', 'mood_great', 'mood_unhappy', 'greet'
+	- entity examples: 0 (0 distinct entities)
+	- found entities: 
+
+DEBUG:rasa_nlu.training_data.training_data:Validating training data...
+INFO:rasa_nlu.model:Starting to train component WhitespaceTokenizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component RegexFeaturizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component CRFEntityExtractor
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component EntitySynonymMapper
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component CountVectorsFeaturizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component EmbeddingIntentClassifier
+DEBUG:rasa_nlu.classifiers.embedding_intent_classifier:Check if num_neg 20 is smaller than number of intents 6, else set num_neg to the number of intents - 1
+WARNING:tensorflow:From c:\users\admin\envs\quanhong\lib\site-packages\rasa_nlu\classifiers\embedding_intent_classifier.py:285: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dense instead.
+WARNING:tensorflow:From c:\users\admin\envs\quanhong\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From c:\users\admin\envs\quanhong\lib\site-packages\rasa_nlu\classifiers\embedding_intent_classifier.py:286: dropout (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dropout instead.
+WARNING:tensorflow:From c:\users\admin\envs\quanhong\lib\site-packages\tensorflow\python\keras\layers\core.py:143: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From c:\users\admin\envs\quanhong\lib\site-packages\tensorflow\python\ops\math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From c:\users\admin\envs\quanhong\lib\site-packages\tensorflow\python\ops\math_grad.py:102: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+INFO:rasa_nlu.classifiers.embedding_intent_classifier:Accuracy is updated every 10 epochs
+INFO:rasa_nlu.classifiers.embedding_intent_classifier:Finished training embedding classifier, loss=0.089, train accuracy=1.000
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Successfully saved model into 'D:\QuanHong\rasa\bot2-python\models\current\nlu'
+WARNING:tensorflow:From c:\users\admin\envs\quanhong\lib\site-packages\tensorflow\python\training\saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+INFO:tensorflow:Restoring parameters from D:\QuanHong\rasa\bot2-python\./models\current\nlu\component_5_EmbeddingIntentClassifier.ckpt
+INFO:rasa_nlu.training_data.loading:Training data format of ./data/nlu.md is md
+INFO:rasa_nlu.training_data.training_data:Training data stats: 
+	- intent examples: 39 (6 distinct intents)
+	- Found intents: 'goodbye', 'affirm', 'deny', 'mood_great', 'mood_unhappy', 'greet'
+	- entity examples: 0 (0 distinct entities)
+	- found entities: 
+
+INFO:rasa_nlu.test:Running model for predictions:
+INFO:rasa_nlu.test:Intent evaluation results:
+INFO:rasa_nlu.test:Intent Evaluation: Only considering those 39 examples that have a defined intent out of 39 examples
+INFO:rasa_nlu.test:F1-Score:  1.0
+INFO:rasa_nlu.test:Precision: 1.0
+INFO:rasa_nlu.test:Accuracy:  1.0
+INFO:rasa_nlu.test:Classification report: 
+              precision    recall  f1-score   support
+
+      affirm       1.00      1.00      1.00         5
+        deny       1.00      1.00      1.00         6
+     goodbye       1.00      1.00      1.00         4
+       greet       1.00      1.00      1.00         6
+  mood_great       1.00      1.00      1.00         8
+mood_unhappy       1.00      1.00      1.00        10
+
+   micro avg       1.00      1.00      1.00        39
+   macro avg       1.00      1.00      1.00        39
+weighted avg       1.00      1.00      1.00        39
+
+INFO:rasa_nlu.test:Your model made no errors
+INFO:rasa_nlu.test:Entity evaluation results:
+INFO:rasa_nlu.test:Evaluation for entity extractor: CRFEntityExtractor 
+INFO:rasa_nlu.test:F1-Score:  1.0
+INFO:rasa_nlu.test:Precision: 1.0
+INFO:rasa_nlu.test:Accuracy:  1.0
+INFO:rasa_nlu.test:Classification report: 
+              precision    recall  f1-score   support
+
+   no_entity       1.00      1.00      1.00        70
+
+   micro avg       1.00      1.00      1.00        70
+   macro avg       1.00      1.00      1.00        70
+weighted avg       1.00      1.00      1.00        70
+
+INFO:tensorflow:Restoring parameters from ./models/current/nlu\component_5_EmbeddingIntentClassifier.ckpt
+INFO:tensorflow:Restoring parameters from ./models/current/nlu\component_5_EmbeddingIntentClassifier.ckpt
+INFO:rasa_nlu.training_data.loading:Training data format of ./data/nlu.md is md
+INFO:rasa_nlu.training_data.training_data:Training data stats: 
+	- intent examples: 25 (6 distinct intents)
+	- Found intents: 'thanks', 'bye', 'fine_ask', 'news', 'fine_normal', 'greet'
+	- entity examples: 9 (1 distinct entities)
+	- found entities: 'category'
+
+DEBUG:rasa_nlu.training_data.training_data:Validating training data...
+INFO:rasa_nlu.model:Starting to train component WhitespaceTokenizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component RegexFeaturizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component CRFEntityExtractor
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component EntitySynonymMapper
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component CountVectorsFeaturizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component EmbeddingIntentClassifier
+DEBUG:rasa_nlu.classifiers.embedding_intent_classifier:Check if num_neg 20 is smaller than number of intents 6, else set num_neg to the number of intents - 1
+INFO:rasa_nlu.classifiers.embedding_intent_classifier:Accuracy is updated every 10 epochs
+INFO:rasa_nlu.classifiers.embedding_intent_classifier:Finished training embedding classifier, loss=0.086, train accuracy=1.000
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Successfully saved model into 'D:\QuanHong\rasa\bot2-python\models\current\nlu'
+INFO:tensorflow:Restoring parameters from D:\QuanHong\rasa\bot2-python\./models\current\nlu\component_5_EmbeddingIntentClassifier.ckpt
+INFO:rasa_nlu.training_data.loading:Training data format of ./data/nlu.md is md
+INFO:rasa_nlu.training_data.training_data:Training data stats: 
+	- intent examples: 25 (6 distinct intents)
+	- Found intents: 'thanks', 'bye', 'fine_ask', 'news', 'fine_normal', 'greet'
+	- entity examples: 9 (1 distinct entities)
+	- found entities: 'category'
+
+INFO:rasa_nlu.test:Running model for predictions:
+INFO:rasa_nlu.test:Intent evaluation results:
+INFO:rasa_nlu.test:Intent Evaluation: Only considering those 25 examples that have a defined intent out of 25 examples
+INFO:rasa_nlu.test:F1-Score:  1.0
+INFO:rasa_nlu.test:Precision: 1.0
+INFO:rasa_nlu.test:Accuracy:  1.0
+INFO:rasa_nlu.test:Classification report: 
+              precision    recall  f1-score   support
+
+         bye       1.00      1.00      1.00         3
+    fine_ask       1.00      1.00      1.00         3
+ fine_normal       1.00      1.00      1.00         4
+       greet       1.00      1.00      1.00         4
+        news       1.00      1.00      1.00         9
+      thanks       1.00      1.00      1.00         2
+
+   micro avg       1.00      1.00      1.00        25
+   macro avg       1.00      1.00      1.00        25
+weighted avg       1.00      1.00      1.00        25
+
+INFO:rasa_nlu.test:Your model made no errors
+INFO:rasa_nlu.test:Entity evaluation results:
+INFO:rasa_nlu.test:Evaluation for entity extractor: CRFEntityExtractor 
+INFO:rasa_nlu.test:F1-Score:  1.0
+INFO:rasa_nlu.test:Precision: 1.0
+INFO:rasa_nlu.test:Accuracy:  1.0
+INFO:rasa_nlu.test:Classification report: 
+              precision    recall  f1-score   support
+
+    category       1.00      1.00      1.00         9
+   no_entity       1.00      1.00      1.00        87
+
+   micro avg       1.00      1.00      1.00        96
+   macro avg       1.00      1.00      1.00        96
+weighted avg       1.00      1.00      1.00        96
+
+INFO:tensorflow:Restoring parameters from ./models/current/nlu\component_5_EmbeddingIntentClassifier.ckpt
+INFO:tensorflow:Restoring parameters from ./models/current/nlu\component_5_EmbeddingIntentClassifier.ckpt
+INFO:tensorflow:Restoring parameters from ./models/current/nlu\component_5_EmbeddingIntentClassifier.ckpt
+INFO:tensorflow:Restoring parameters from ./models/current/nlu\component_5_EmbeddingIntentClassifier.ckpt
+INFO:rasa_nlu.training_data.loading:Training data format of ./data/nlu.md is md
+INFO:rasa_nlu.training_data.training_data:Training data stats: 
+	- intent examples: 25 (6 distinct intents)
+	- Found intents: 'thanks', 'greet', 'fine_ask', 'bye', 'news', 'fine_normal'
+	- entity examples: 9 (1 distinct entities)
+	- found entities: 'category'
+
+DEBUG:rasa_nlu.training_data.training_data:Validating training data...
+INFO:rasa_nlu.model:Starting to train component WhitespaceTokenizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component RegexFeaturizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component CRFEntityExtractor
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component EntitySynonymMapper
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component CountVectorsFeaturizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component EmbeddingIntentClassifier
+DEBUG:rasa_nlu.classifiers.embedding_intent_classifier:Check if num_neg 20 is smaller than number of intents 6, else set num_neg to the number of intents - 1
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\rasa_nlu\classifiers\embedding_intent_classifier.py:285: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dense instead.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\rasa_nlu\classifiers\embedding_intent_classifier.py:286: dropout (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dropout instead.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\keras\layers\core.py:143: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\ops\math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\ops\math_grad.py:102: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+INFO:rasa_nlu.classifiers.embedding_intent_classifier:Accuracy is updated every 10 epochs
+INFO:rasa_nlu.classifiers.embedding_intent_classifier:Finished training embedding classifier, loss=0.093, train accuracy=1.000
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Successfully saved model into 'D:\QuanHong\rasa\bot2-python\models\current\nlu'
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\training\saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+INFO:tensorflow:Restoring parameters from D:\QuanHong\rasa\bot2-python\./models\current\nlu\component_5_EmbeddingIntentClassifier.ckpt
+INFO:rasa_nlu.training_data.loading:Training data format of ./data/nlu.md is md
+INFO:rasa_nlu.training_data.training_data:Training data stats: 
+	- intent examples: 25 (6 distinct intents)
+	- Found intents: 'thanks', 'greet', 'fine_ask', 'bye', 'news', 'fine_normal'
+	- entity examples: 9 (1 distinct entities)
+	- found entities: 'category'
+
+INFO:rasa_nlu.test:Running model for predictions:
+INFO:rasa_nlu.test:Intent evaluation results:
+INFO:rasa_nlu.test:Intent Evaluation: Only considering those 25 examples that have a defined intent out of 25 examples
+INFO:rasa_nlu.test:F1-Score:  1.0
+INFO:rasa_nlu.test:Precision: 1.0
+INFO:rasa_nlu.test:Accuracy:  1.0
+INFO:rasa_nlu.test:Classification report: 
+              precision    recall  f1-score   support
+
+         bye       1.00      1.00      1.00         3
+    fine_ask       1.00      1.00      1.00         3
+ fine_normal       1.00      1.00      1.00         4
+       greet       1.00      1.00      1.00         4
+        news       1.00      1.00      1.00         9
+      thanks       1.00      1.00      1.00         2
+
+   micro avg       1.00      1.00      1.00        25
+   macro avg       1.00      1.00      1.00        25
+weighted avg       1.00      1.00      1.00        25
+
+INFO:rasa_nlu.test:Your model made no errors
+INFO:rasa_nlu.test:Entity evaluation results:
+INFO:rasa_nlu.test:Evaluation for entity extractor: CRFEntityExtractor 
+INFO:rasa_nlu.test:F1-Score:  1.0
+INFO:rasa_nlu.test:Precision: 1.0
+INFO:rasa_nlu.test:Accuracy:  1.0
+INFO:rasa_nlu.test:Classification report: 
+              precision    recall  f1-score   support
+
+    category       1.00      1.00      1.00         9
+   no_entity       1.00      1.00      1.00        87
+
+   micro avg       1.00      1.00      1.00        96
+   macro avg       1.00      1.00      1.00        96
+weighted avg       1.00      1.00      1.00        96
+
+INFO:tensorflow:Restoring parameters from ./models/current/nlu\component_5_EmbeddingIntentClassifier.ckpt
+INFO:rasa_nlu.training_data.loading:Training data format of ./data/nlu.md is md
+INFO:rasa_nlu.training_data.training_data:Training data stats: 
+	- intent examples: 25 (6 distinct intents)
+	- Found intents: 'thanks', 'greet', 'fine_ask', 'bye', 'news', 'fine_normal'
+	- entity examples: 9 (1 distinct entities)
+	- found entities: 'category'
+
+WARNING:rasa_nlu.config:You have specified the pipeline template 'tensorflow_embedding' which has been renamed to 'supervised_embeddings'. Please update your code as it will no longer work with future versions of Rasa NLU.
+DEBUG:rasa_nlu.training_data.training_data:Validating training data...
+INFO:rasa_nlu.model:Starting to train component WhitespaceTokenizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component RegexFeaturizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component CRFEntityExtractor
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component EntitySynonymMapper
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component CountVectorsFeaturizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component EmbeddingIntentClassifier
+DEBUG:rasa_nlu.classifiers.embedding_intent_classifier:Check if num_neg 20 is smaller than number of intents 6, else set num_neg to the number of intents - 1
+INFO:rasa_nlu.classifiers.embedding_intent_classifier:Accuracy is updated every 10 epochs
+INFO:rasa_nlu.classifiers.embedding_intent_classifier:Finished training embedding classifier, loss=0.093, train accuracy=1.000
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Successfully saved model into 'D:\QuanHong\rasa\bot2-python\models\current\nlu'
+INFO:tensorflow:Restoring parameters from D:\QuanHong\rasa\bot2-python\./models\current\nlu\component_5_EmbeddingIntentClassifier.ckpt
+INFO:rasa_nlu.training_data.loading:Training data format of ./data/nlu.md is md
+INFO:rasa_nlu.training_data.training_data:Training data stats: 
+	- intent examples: 25 (6 distinct intents)
+	- Found intents: 'thanks', 'greet', 'fine_ask', 'bye', 'news', 'fine_normal'
+	- entity examples: 9 (1 distinct entities)
+	- found entities: 'category'
+
+INFO:rasa_nlu.test:Running model for predictions:
+INFO:rasa_nlu.test:Intent evaluation results:
+INFO:rasa_nlu.test:Intent Evaluation: Only considering those 25 examples that have a defined intent out of 25 examples
+INFO:rasa_nlu.test:F1-Score:  1.0
+INFO:rasa_nlu.test:Precision: 1.0
+INFO:rasa_nlu.test:Accuracy:  1.0
+INFO:rasa_nlu.test:Classification report: 
+              precision    recall  f1-score   support
+
+         bye       1.00      1.00      1.00         3
+    fine_ask       1.00      1.00      1.00         3
+ fine_normal       1.00      1.00      1.00         4
+       greet       1.00      1.00      1.00         4
+        news       1.00      1.00      1.00         9
+      thanks       1.00      1.00      1.00         2
+
+   micro avg       1.00      1.00      1.00        25
+   macro avg       1.00      1.00      1.00        25
+weighted avg       1.00      1.00      1.00        25
+
+INFO:rasa_nlu.test:Your model made no errors
+INFO:rasa_nlu.test:Entity evaluation results:
+INFO:rasa_nlu.test:Evaluation for entity extractor: CRFEntityExtractor 
+INFO:rasa_nlu.test:F1-Score:  1.0
+INFO:rasa_nlu.test:Precision: 1.0
+INFO:rasa_nlu.test:Accuracy:  1.0
+INFO:rasa_nlu.test:Classification report: 
+              precision    recall  f1-score   support
+
+    category       1.00      1.00      1.00         9
+   no_entity       1.00      1.00      1.00        87
+
+   micro avg       1.00      1.00      1.00        96
+   macro avg       1.00      1.00      1.00        96
+weighted avg       1.00      1.00      1.00        96
+
+INFO:tensorflow:Restoring parameters from ./models/current/nlu\component_5_EmbeddingIntentClassifier.ckpt
+INFO:rasa_nlu.training_data.loading:Training data format of ./data/nlu.md is md
+INFO:rasa_nlu.training_data.training_data:Training data stats: 
+	- intent examples: 25 (6 distinct intents)
+	- Found intents: 'news', 'fine_ask', 'fine_normal', 'thanks', 'bye', 'greet'
+	- entity examples: 9 (1 distinct entities)
+	- found entities: 'category'
+
+WARNING:rasa_nlu.config:You have specified the pipeline template 'tensorflow_embedding' which has been renamed to 'supervised_embeddings'. Please update your code as it will no longer work with future versions of Rasa NLU.
+DEBUG:rasa_nlu.training_data.training_data:Validating training data...
+INFO:rasa_nlu.model:Starting to train component WhitespaceTokenizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component RegexFeaturizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component CRFEntityExtractor
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component EntitySynonymMapper
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component CountVectorsFeaturizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component EmbeddingIntentClassifier
+DEBUG:rasa_nlu.classifiers.embedding_intent_classifier:Check if num_neg 20 is smaller than number of intents 6, else set num_neg to the number of intents - 1
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\rasa_nlu\classifiers\embedding_intent_classifier.py:285: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dense instead.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\rasa_nlu\classifiers\embedding_intent_classifier.py:286: dropout (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dropout instead.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\keras\layers\core.py:143: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\ops\math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\ops\math_grad.py:102: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+INFO:rasa_nlu.classifiers.embedding_intent_classifier:Accuracy is updated every 10 epochs
+INFO:rasa_nlu.classifiers.embedding_intent_classifier:Finished training embedding classifier, loss=0.096, train accuracy=1.000
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Successfully saved model into 'D:\QuanHong\rasa\bot2-python\models\current\nlu'
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\training\saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+INFO:tensorflow:Restoring parameters from D:\QuanHong\rasa\bot2-python\./models\current\nlu\component_5_EmbeddingIntentClassifier.ckpt
+INFO:rasa_nlu.training_data.loading:Training data format of ./data/nlu.md is md
+INFO:rasa_nlu.training_data.training_data:Training data stats: 
+	- intent examples: 25 (6 distinct intents)
+	- Found intents: 'news', 'fine_ask', 'fine_normal', 'thanks', 'bye', 'greet'
+	- entity examples: 9 (1 distinct entities)
+	- found entities: 'category'
+
+INFO:rasa_nlu.test:Running model for predictions:
+INFO:rasa_nlu.test:Intent evaluation results:
+INFO:rasa_nlu.test:Intent Evaluation: Only considering those 25 examples that have a defined intent out of 25 examples
+INFO:rasa_nlu.test:F1-Score:  1.0
+INFO:rasa_nlu.test:Precision: 1.0
+INFO:rasa_nlu.test:Accuracy:  1.0
+INFO:rasa_nlu.test:Classification report: 
+              precision    recall  f1-score   support
+
+         bye       1.00      1.00      1.00         3
+    fine_ask       1.00      1.00      1.00         3
+ fine_normal       1.00      1.00      1.00         4
+       greet       1.00      1.00      1.00         4
+        news       1.00      1.00      1.00         9
+      thanks       1.00      1.00      1.00         2
+
+   micro avg       1.00      1.00      1.00        25
+   macro avg       1.00      1.00      1.00        25
+weighted avg       1.00      1.00      1.00        25
+
+INFO:rasa_nlu.test:Your model made no errors
+INFO:rasa_nlu.test:Entity evaluation results:
+INFO:rasa_nlu.test:Evaluation for entity extractor: CRFEntityExtractor 
+INFO:rasa_nlu.test:F1-Score:  1.0
+INFO:rasa_nlu.test:Precision: 1.0
+INFO:rasa_nlu.test:Accuracy:  1.0
+INFO:rasa_nlu.test:Classification report: 
+              precision    recall  f1-score   support
+
+    category       1.00      1.00      1.00         9
+   no_entity       1.00      1.00      1.00        87
+
+   micro avg       1.00      1.00      1.00        96
+   macro avg       1.00      1.00      1.00        96
+weighted avg       1.00      1.00      1.00        96
+
+INFO:tensorflow:Restoring parameters from ./models/current/nlu\component_5_EmbeddingIntentClassifier.ckpt
+INFO:rasa_nlu.training_data.loading:Training data format of ./data/nlu.md is md
+INFO:rasa_nlu.training_data.training_data:Training data stats: 
+	- intent examples: 25 (6 distinct intents)
+	- Found intents: 'fine_normal', 'thanks', 'bye', 'news', 'fine_ask', 'greet'
+	- entity examples: 9 (1 distinct entities)
+	- found entities: 'category'
+
+WARNING:rasa_nlu.config:You have specified the pipeline template 'tensorflow_embedding' which has been renamed to 'supervised_embeddings'. Please update your code as it will no longer work with future versions of Rasa NLU.
+DEBUG:rasa_nlu.training_data.training_data:Validating training data...
+INFO:rasa_nlu.model:Starting to train component WhitespaceTokenizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component RegexFeaturizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component CRFEntityExtractor
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component EntitySynonymMapper
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component CountVectorsFeaturizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component EmbeddingIntentClassifier
+DEBUG:rasa_nlu.classifiers.embedding_intent_classifier:Check if num_neg 20 is smaller than number of intents 6, else set num_neg to the number of intents - 1
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\rasa_nlu\classifiers\embedding_intent_classifier.py:285: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dense instead.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\rasa_nlu\classifiers\embedding_intent_classifier.py:286: dropout (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dropout instead.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\keras\layers\core.py:143: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\ops\math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\ops\math_grad.py:102: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+INFO:rasa_nlu.classifiers.embedding_intent_classifier:Accuracy is updated every 10 epochs
+INFO:rasa_nlu.classifiers.embedding_intent_classifier:Finished training embedding classifier, loss=0.092, train accuracy=1.000
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Successfully saved model into 'D:\QuanHong\rasa\bot2-python\models\current\nlu'
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\training\saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+INFO:tensorflow:Restoring parameters from D:\QuanHong\rasa\bot2-python\./models\current\nlu\component_5_EmbeddingIntentClassifier.ckpt
+INFO:rasa_nlu.training_data.loading:Training data format of ./data/nlu.md is md
+INFO:rasa_nlu.training_data.training_data:Training data stats: 
+	- intent examples: 25 (6 distinct intents)
+	- Found intents: 'fine_normal', 'thanks', 'bye', 'news', 'fine_ask', 'greet'
+	- entity examples: 9 (1 distinct entities)
+	- found entities: 'category'
+
+INFO:rasa_nlu.test:Running model for predictions:
+INFO:rasa_nlu.test:Intent evaluation results:
+INFO:rasa_nlu.test:Intent Evaluation: Only considering those 25 examples that have a defined intent out of 25 examples
+INFO:rasa_nlu.test:F1-Score:  1.0
+INFO:rasa_nlu.test:Precision: 1.0
+INFO:rasa_nlu.test:Accuracy:  1.0
+INFO:rasa_nlu.test:Classification report: 
+              precision    recall  f1-score   support
+
+         bye       1.00      1.00      1.00         3
+    fine_ask       1.00      1.00      1.00         3
+ fine_normal       1.00      1.00      1.00         4
+       greet       1.00      1.00      1.00         4
+        news       1.00      1.00      1.00         9
+      thanks       1.00      1.00      1.00         2
+
+   micro avg       1.00      1.00      1.00        25
+   macro avg       1.00      1.00      1.00        25
+weighted avg       1.00      1.00      1.00        25
+
+INFO:rasa_nlu.test:Your model made no errors
+INFO:rasa_nlu.test:Entity evaluation results:
+INFO:rasa_nlu.test:Evaluation for entity extractor: CRFEntityExtractor 
+INFO:rasa_nlu.test:F1-Score:  1.0
+INFO:rasa_nlu.test:Precision: 1.0
+INFO:rasa_nlu.test:Accuracy:  1.0
+INFO:rasa_nlu.test:Classification report: 
+              precision    recall  f1-score   support
+
+    category       1.00      1.00      1.00         9
+   no_entity       1.00      1.00      1.00        87
+
+   micro avg       1.00      1.00      1.00        96
+   macro avg       1.00      1.00      1.00        96
+weighted avg       1.00      1.00      1.00        96
+
+INFO:rasa_nlu.training_data.loading:Training data format of ./data/nlu.md is md
+INFO:rasa_nlu.training_data.training_data:Training data stats: 
+	- intent examples: 25 (6 distinct intents)
+	- Found intents: 'greet', 'bye', 'fine_ask', 'thanks', 'fine_normal', 'news'
+	- entity examples: 9 (1 distinct entities)
+	- found entities: 'category'
+
+WARNING:rasa_nlu.config:You have specified the pipeline template 'tensorflow_embedding' which has been renamed to 'supervised_embeddings'. Please update your code as it will no longer work with future versions of Rasa NLU.
+DEBUG:rasa_nlu.training_data.training_data:Validating training data...
+INFO:rasa_nlu.model:Starting to train component WhitespaceTokenizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component RegexFeaturizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component CRFEntityExtractor
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component EntitySynonymMapper
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component CountVectorsFeaturizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component EmbeddingIntentClassifier
+DEBUG:rasa_nlu.classifiers.embedding_intent_classifier:Check if num_neg 20 is smaller than number of intents 6, else set num_neg to the number of intents - 1
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\rasa_nlu\classifiers\embedding_intent_classifier.py:285: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dense instead.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\rasa_nlu\classifiers\embedding_intent_classifier.py:286: dropout (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dropout instead.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\keras\layers\core.py:143: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\ops\math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\ops\math_grad.py:102: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+INFO:rasa_nlu.classifiers.embedding_intent_classifier:Accuracy is updated every 10 epochs
+INFO:rasa_nlu.classifiers.embedding_intent_classifier:Finished training embedding classifier, loss=0.093, train accuracy=1.000
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Successfully saved model into 'D:\QuanHong\rasa\bot2-python\models\current\nlu'
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\training\saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+INFO:tensorflow:Restoring parameters from D:\QuanHong\rasa\bot2-python\./models\current\nlu\component_5_EmbeddingIntentClassifier.ckpt
+INFO:rasa_nlu.training_data.loading:Training data format of ./data/nlu.md is md
+INFO:rasa_nlu.training_data.training_data:Training data stats: 
+	- intent examples: 25 (6 distinct intents)
+	- Found intents: 'greet', 'bye', 'fine_ask', 'thanks', 'fine_normal', 'news'
+	- entity examples: 9 (1 distinct entities)
+	- found entities: 'category'
+
+INFO:rasa_nlu.test:Running model for predictions:
+INFO:rasa_nlu.test:Intent evaluation results:
+INFO:rasa_nlu.test:Intent Evaluation: Only considering those 25 examples that have a defined intent out of 25 examples
+INFO:rasa_nlu.test:F1-Score:  1.0
+INFO:rasa_nlu.test:Precision: 1.0
+INFO:rasa_nlu.test:Accuracy:  1.0
+INFO:rasa_nlu.test:Classification report: 
+              precision    recall  f1-score   support
+
+         bye       1.00      1.00      1.00         3
+    fine_ask       1.00      1.00      1.00         3
+ fine_normal       1.00      1.00      1.00         4
+       greet       1.00      1.00      1.00         4
+        news       1.00      1.00      1.00         9
+      thanks       1.00      1.00      1.00         2
+
+   micro avg       1.00      1.00      1.00        25
+   macro avg       1.00      1.00      1.00        25
+weighted avg       1.00      1.00      1.00        25
+
+INFO:rasa_nlu.test:Your model made no errors
+INFO:rasa_nlu.test:Entity evaluation results:
+INFO:rasa_nlu.test:Evaluation for entity extractor: CRFEntityExtractor 
+INFO:rasa_nlu.test:F1-Score:  1.0
+INFO:rasa_nlu.test:Precision: 1.0
+INFO:rasa_nlu.test:Accuracy:  1.0
+INFO:rasa_nlu.test:Classification report: 
+              precision    recall  f1-score   support
+
+    category       1.00      1.00      1.00         9
+   no_entity       1.00      1.00      1.00        87
+
+   micro avg       1.00      1.00      1.00        96
+   macro avg       1.00      1.00      1.00        96
+weighted avg       1.00      1.00      1.00        96
+
+INFO:rasa_nlu.training_data.loading:Training data format of ./data/nlu.md is md
+INFO:rasa_nlu.training_data.training_data:Training data stats: 
+	- intent examples: 25 (6 distinct intents)
+	- Found intents: 'fine_ask', 'greet', 'fine_normal', 'thanks', 'bye', 'news'
+	- entity examples: 9 (1 distinct entities)
+	- found entities: 'category'
+
+WARNING:rasa_nlu.config:You have specified the pipeline template 'tensorflow_embedding' which has been renamed to 'supervised_embeddings'. Please update your code as it will no longer work with future versions of Rasa NLU.
+DEBUG:rasa_nlu.training_data.training_data:Validating training data...
+INFO:rasa_nlu.model:Starting to train component WhitespaceTokenizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component RegexFeaturizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component CRFEntityExtractor
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component EntitySynonymMapper
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component CountVectorsFeaturizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component EmbeddingIntentClassifier
+DEBUG:rasa_nlu.classifiers.embedding_intent_classifier:Check if num_neg 20 is smaller than number of intents 6, else set num_neg to the number of intents - 1
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\rasa_nlu\classifiers\embedding_intent_classifier.py:285: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dense instead.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\rasa_nlu\classifiers\embedding_intent_classifier.py:286: dropout (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dropout instead.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\keras\layers\core.py:143: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\ops\math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\ops\math_grad.py:102: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+INFO:rasa_nlu.classifiers.embedding_intent_classifier:Accuracy is updated every 10 epochs
+INFO:rasa_nlu.classifiers.embedding_intent_classifier:Finished training embedding classifier, loss=0.092, train accuracy=1.000
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Successfully saved model into 'D:\QuanHong\rasa\bot2-python\models\current\nlu'
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\training\saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+INFO:tensorflow:Restoring parameters from D:\QuanHong\rasa\bot2-python\./models\current\nlu\component_5_EmbeddingIntentClassifier.ckpt
+INFO:rasa_nlu.training_data.loading:Training data format of ./data/nlu.md is md
+INFO:rasa_nlu.training_data.training_data:Training data stats: 
+	- intent examples: 25 (6 distinct intents)
+	- Found intents: 'fine_ask', 'greet', 'fine_normal', 'thanks', 'bye', 'news'
+	- entity examples: 9 (1 distinct entities)
+	- found entities: 'category'
+
+INFO:rasa_nlu.test:Running model for predictions:
+INFO:rasa_nlu.test:Intent evaluation results:
+INFO:rasa_nlu.test:Intent Evaluation: Only considering those 25 examples that have a defined intent out of 25 examples
+INFO:rasa_nlu.test:F1-Score:  1.0
+INFO:rasa_nlu.test:Precision: 1.0
+INFO:rasa_nlu.test:Accuracy:  1.0
+INFO:rasa_nlu.test:Classification report: 
+              precision    recall  f1-score   support
+
+         bye       1.00      1.00      1.00         3
+    fine_ask       1.00      1.00      1.00         3
+ fine_normal       1.00      1.00      1.00         4
+       greet       1.00      1.00      1.00         4
+        news       1.00      1.00      1.00         9
+      thanks       1.00      1.00      1.00         2
+
+   micro avg       1.00      1.00      1.00        25
+   macro avg       1.00      1.00      1.00        25
+weighted avg       1.00      1.00      1.00        25
+
+INFO:rasa_nlu.test:Your model made no errors
+INFO:rasa_nlu.test:Entity evaluation results:
+INFO:rasa_nlu.test:Evaluation for entity extractor: CRFEntityExtractor 
+INFO:rasa_nlu.test:F1-Score:  1.0
+INFO:rasa_nlu.test:Precision: 1.0
+INFO:rasa_nlu.test:Accuracy:  1.0
+INFO:rasa_nlu.test:Classification report: 
+              precision    recall  f1-score   support
+
+    category       1.00      1.00      1.00         9
+   no_entity       1.00      1.00      1.00        87
+
+   micro avg       1.00      1.00      1.00        96
+   macro avg       1.00      1.00      1.00        96
+weighted avg       1.00      1.00      1.00        96
+
+INFO:rasa_nlu.training_data.loading:Training data format of ./data/nlu.md is md
+INFO:rasa_nlu.training_data.training_data:Training data stats: 
+	- intent examples: 25 (6 distinct intents)
+	- Found intents: 'thanks', 'greet', 'fine_normal', 'news', 'bye', 'fine_ask'
+	- entity examples: 9 (1 distinct entities)
+	- found entities: 'category'
+
+WARNING:rasa_nlu.config:You have specified the pipeline template 'tensorflow_embedding' which has been renamed to 'supervised_embeddings'. Please update your code as it will no longer work with future versions of Rasa NLU.
+DEBUG:rasa_nlu.training_data.training_data:Validating training data...
+INFO:rasa_nlu.model:Starting to train component WhitespaceTokenizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component RegexFeaturizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component CRFEntityExtractor
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component EntitySynonymMapper
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component CountVectorsFeaturizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component EmbeddingIntentClassifier
+DEBUG:rasa_nlu.classifiers.embedding_intent_classifier:Check if num_neg 20 is smaller than number of intents 6, else set num_neg to the number of intents - 1
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\rasa_nlu\classifiers\embedding_intent_classifier.py:285: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dense instead.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\rasa_nlu\classifiers\embedding_intent_classifier.py:286: dropout (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dropout instead.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\keras\layers\core.py:143: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\ops\math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\ops\math_grad.py:102: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+INFO:rasa_nlu.classifiers.embedding_intent_classifier:Accuracy is updated every 10 epochs
+INFO:rasa_nlu.classifiers.embedding_intent_classifier:Finished training embedding classifier, loss=0.097, train accuracy=1.000
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Successfully saved model into 'D:\QuanHong\rasa\bot2-python\models\current\nlu'
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\training\saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+INFO:tensorflow:Restoring parameters from D:\QuanHong\rasa\bot2-python\./models\current\nlu\component_5_EmbeddingIntentClassifier.ckpt
+INFO:rasa_nlu.training_data.loading:Training data format of ./data/nlu.md is md
+INFO:rasa_nlu.training_data.training_data:Training data stats: 
+	- intent examples: 25 (6 distinct intents)
+	- Found intents: 'thanks', 'greet', 'fine_normal', 'news', 'bye', 'fine_ask'
+	- entity examples: 9 (1 distinct entities)
+	- found entities: 'category'
+
+INFO:rasa_nlu.test:Running model for predictions:
+INFO:rasa_nlu.test:Intent evaluation results:
+INFO:rasa_nlu.test:Intent Evaluation: Only considering those 25 examples that have a defined intent out of 25 examples
+INFO:rasa_nlu.test:F1-Score:  1.0
+INFO:rasa_nlu.test:Precision: 1.0
+INFO:rasa_nlu.test:Accuracy:  1.0
+INFO:rasa_nlu.test:Classification report: 
+              precision    recall  f1-score   support
+
+         bye       1.00      1.00      1.00         3
+    fine_ask       1.00      1.00      1.00         3
+ fine_normal       1.00      1.00      1.00         4
+       greet       1.00      1.00      1.00         4
+        news       1.00      1.00      1.00         9
+      thanks       1.00      1.00      1.00         2
+
+   micro avg       1.00      1.00      1.00        25
+   macro avg       1.00      1.00      1.00        25
+weighted avg       1.00      1.00      1.00        25
+
+INFO:rasa_nlu.test:Your model made no errors
+INFO:rasa_nlu.test:Entity evaluation results:
+INFO:rasa_nlu.test:Evaluation for entity extractor: CRFEntityExtractor 
+INFO:rasa_nlu.test:F1-Score:  1.0
+INFO:rasa_nlu.test:Precision: 1.0
+INFO:rasa_nlu.test:Accuracy:  1.0
+INFO:rasa_nlu.test:Classification report: 
+              precision    recall  f1-score   support
+
+    category       1.00      1.00      1.00         9
+   no_entity       1.00      1.00      1.00        87
+
+   micro avg       1.00      1.00      1.00        96
+   macro avg       1.00      1.00      1.00        96
+weighted avg       1.00      1.00      1.00        96
+
+INFO:rasa_nlu.training_data.loading:Training data format of ./data/nlu.md is md
+INFO:rasa_nlu.training_data.training_data:Training data stats: 
+	- intent examples: 25 (6 distinct intents)
+	- Found intents: 'fine_ask', 'bye', 'greet', 'thanks', 'news', 'fine_normal'
+	- entity examples: 9 (1 distinct entities)
+	- found entities: 'category'
+
+WARNING:rasa_nlu.config:You have specified the pipeline template 'tensorflow_embedding' which has been renamed to 'supervised_embeddings'. Please update your code as it will no longer work with future versions of Rasa NLU.
+DEBUG:rasa_nlu.training_data.training_data:Validating training data...
+INFO:rasa_nlu.model:Starting to train component WhitespaceTokenizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component RegexFeaturizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component CRFEntityExtractor
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component EntitySynonymMapper
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component CountVectorsFeaturizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component EmbeddingIntentClassifier
+DEBUG:rasa_nlu.classifiers.embedding_intent_classifier:Check if num_neg 20 is smaller than number of intents 6, else set num_neg to the number of intents - 1
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\rasa_nlu\classifiers\embedding_intent_classifier.py:285: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dense instead.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\rasa_nlu\classifiers\embedding_intent_classifier.py:286: dropout (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dropout instead.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\keras\layers\core.py:143: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\ops\math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\ops\math_grad.py:102: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+INFO:rasa_nlu.classifiers.embedding_intent_classifier:Accuracy is updated every 10 epochs
+INFO:rasa_nlu.classifiers.embedding_intent_classifier:Finished training embedding classifier, loss=0.101, train accuracy=1.000
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Successfully saved model into 'D:\QuanHong\rasa\bot2-python\models\current\nlu'
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\training\saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+INFO:tensorflow:Restoring parameters from D:\QuanHong\rasa\bot2-python\./models\current\nlu\component_5_EmbeddingIntentClassifier.ckpt
+INFO:rasa_nlu.training_data.loading:Training data format of ./data/nlu.md is md
+INFO:rasa_nlu.training_data.training_data:Training data stats: 
+	- intent examples: 25 (6 distinct intents)
+	- Found intents: 'fine_ask', 'bye', 'greet', 'thanks', 'news', 'fine_normal'
+	- entity examples: 9 (1 distinct entities)
+	- found entities: 'category'
+
+INFO:rasa_nlu.test:Running model for predictions:
+INFO:rasa_nlu.test:Intent evaluation results:
+INFO:rasa_nlu.test:Intent Evaluation: Only considering those 25 examples that have a defined intent out of 25 examples
+INFO:rasa_nlu.test:F1-Score:  1.0
+INFO:rasa_nlu.test:Precision: 1.0
+INFO:rasa_nlu.test:Accuracy:  1.0
+INFO:rasa_nlu.test:Classification report: 
+              precision    recall  f1-score   support
+
+         bye       1.00      1.00      1.00         3
+    fine_ask       1.00      1.00      1.00         3
+ fine_normal       1.00      1.00      1.00         4
+       greet       1.00      1.00      1.00         4
+        news       1.00      1.00      1.00         9
+      thanks       1.00      1.00      1.00         2
+
+   micro avg       1.00      1.00      1.00        25
+   macro avg       1.00      1.00      1.00        25
+weighted avg       1.00      1.00      1.00        25
+
+INFO:rasa_nlu.test:Your model made no errors
+INFO:rasa_nlu.test:Entity evaluation results:
+INFO:rasa_nlu.test:Evaluation for entity extractor: CRFEntityExtractor 
+INFO:rasa_nlu.test:F1-Score:  1.0
+INFO:rasa_nlu.test:Precision: 1.0
+INFO:rasa_nlu.test:Accuracy:  1.0
+INFO:rasa_nlu.test:Classification report: 
+              precision    recall  f1-score   support
+
+    category       1.00      1.00      1.00         9
+   no_entity       1.00      1.00      1.00        87
+
+   micro avg       1.00      1.00      1.00        96
+   macro avg       1.00      1.00      1.00        96
+weighted avg       1.00      1.00      1.00        96
+
+INFO:rasa_nlu.training_data.loading:Training data format of ./data/nlu.md is md
+INFO:rasa_nlu.training_data.training_data:Training data stats: 
+	- intent examples: 25 (6 distinct intents)
+	- Found intents: 'greet', 'thanks', 'news', 'fine_normal', 'bye', 'fine_ask'
+	- entity examples: 9 (1 distinct entities)
+	- found entities: 'category'
+
+WARNING:rasa_nlu.config:You have specified the pipeline template 'tensorflow_embedding' which has been renamed to 'supervised_embeddings'. Please update your code as it will no longer work with future versions of Rasa NLU.
+DEBUG:rasa_nlu.training_data.training_data:Validating training data...
+INFO:rasa_nlu.model:Starting to train component WhitespaceTokenizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component RegexFeaturizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component CRFEntityExtractor
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component EntitySynonymMapper
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component CountVectorsFeaturizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component EmbeddingIntentClassifier
+DEBUG:rasa_nlu.classifiers.embedding_intent_classifier:Check if num_neg 20 is smaller than number of intents 6, else set num_neg to the number of intents - 1
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\rasa_nlu\classifiers\embedding_intent_classifier.py:285: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dense instead.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\rasa_nlu\classifiers\embedding_intent_classifier.py:286: dropout (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dropout instead.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\keras\layers\core.py:143: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\ops\math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\ops\math_grad.py:102: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+INFO:rasa_nlu.classifiers.embedding_intent_classifier:Accuracy is updated every 10 epochs
+INFO:rasa_nlu.classifiers.embedding_intent_classifier:Finished training embedding classifier, loss=0.095, train accuracy=1.000
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Successfully saved model into 'D:\QuanHong\rasa\bot2-python\models\current\nlu'
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\training\saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+INFO:tensorflow:Restoring parameters from D:\QuanHong\rasa\bot2-python\./models\current\nlu\component_5_EmbeddingIntentClassifier.ckpt
+INFO:rasa_nlu.training_data.loading:Training data format of ./data/nlu.md is md
+INFO:rasa_nlu.training_data.training_data:Training data stats: 
+	- intent examples: 25 (6 distinct intents)
+	- Found intents: 'greet', 'thanks', 'news', 'fine_normal', 'bye', 'fine_ask'
+	- entity examples: 9 (1 distinct entities)
+	- found entities: 'category'
+
+INFO:rasa_nlu.test:Running model for predictions:
+INFO:rasa_nlu.test:Intent evaluation results:
+INFO:rasa_nlu.test:Intent Evaluation: Only considering those 25 examples that have a defined intent out of 25 examples
+INFO:rasa_nlu.test:F1-Score:  1.0
+INFO:rasa_nlu.test:Precision: 1.0
+INFO:rasa_nlu.test:Accuracy:  1.0
+INFO:rasa_nlu.test:Classification report: 
+              precision    recall  f1-score   support
+
+         bye       1.00      1.00      1.00         3
+    fine_ask       1.00      1.00      1.00         3
+ fine_normal       1.00      1.00      1.00         4
+       greet       1.00      1.00      1.00         4
+        news       1.00      1.00      1.00         9
+      thanks       1.00      1.00      1.00         2
+
+   micro avg       1.00      1.00      1.00        25
+   macro avg       1.00      1.00      1.00        25
+weighted avg       1.00      1.00      1.00        25
+
+INFO:rasa_nlu.test:Your model made no errors
+INFO:rasa_nlu.test:Entity evaluation results:
+INFO:rasa_nlu.test:Evaluation for entity extractor: CRFEntityExtractor 
+INFO:rasa_nlu.test:F1-Score:  1.0
+INFO:rasa_nlu.test:Precision: 1.0
+INFO:rasa_nlu.test:Accuracy:  1.0
+INFO:rasa_nlu.test:Classification report: 
+              precision    recall  f1-score   support
+
+    category       1.00      1.00      1.00         9
+   no_entity       1.00      1.00      1.00        87
+
+   micro avg       1.00      1.00      1.00        96
+   macro avg       1.00      1.00      1.00        96
+weighted avg       1.00      1.00      1.00        96
+
+INFO:rasa_nlu.training_data.loading:Training data format of ./data/nlu.md is md
+INFO:rasa_nlu.training_data.training_data:Training data stats: 
+	- intent examples: 25 (6 distinct intents)
+	- Found intents: 'bye', 'thanks', 'fine_ask', 'fine_normal', 'news', 'greet'
+	- entity examples: 9 (1 distinct entities)
+	- found entities: 'category'
+
+WARNING:rasa_nlu.config:You have specified the pipeline template 'tensorflow_embedding' which has been renamed to 'supervised_embeddings'. Please update your code as it will no longer work with future versions of Rasa NLU.
+DEBUG:rasa_nlu.training_data.training_data:Validating training data...
+INFO:rasa_nlu.model:Starting to train component WhitespaceTokenizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component RegexFeaturizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component CRFEntityExtractor
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component EntitySynonymMapper
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component CountVectorsFeaturizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component EmbeddingIntentClassifier
+DEBUG:rasa_nlu.classifiers.embedding_intent_classifier:Check if num_neg 20 is smaller than number of intents 6, else set num_neg to the number of intents - 1
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\rasa_nlu\classifiers\embedding_intent_classifier.py:285: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dense instead.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\rasa_nlu\classifiers\embedding_intent_classifier.py:286: dropout (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dropout instead.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\keras\layers\core.py:143: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\ops\math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\ops\math_grad.py:102: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+INFO:rasa_nlu.classifiers.embedding_intent_classifier:Accuracy is updated every 10 epochs
+INFO:rasa_nlu.classifiers.embedding_intent_classifier:Finished training embedding classifier, loss=0.090, train accuracy=1.000
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Successfully saved model into 'D:\QuanHong\rasa\bot2-python\models\current\nlu'
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\training\saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+INFO:tensorflow:Restoring parameters from D:\QuanHong\rasa\bot2-python\./models\current\nlu\component_5_EmbeddingIntentClassifier.ckpt
+INFO:rasa_nlu.training_data.loading:Training data format of ./data/nlu.md is md
+INFO:rasa_nlu.training_data.training_data:Training data stats: 
+	- intent examples: 25 (6 distinct intents)
+	- Found intents: 'bye', 'thanks', 'fine_ask', 'fine_normal', 'news', 'greet'
+	- entity examples: 9 (1 distinct entities)
+	- found entities: 'category'
+
+INFO:rasa_nlu.test:Running model for predictions:
+INFO:rasa_nlu.test:Intent evaluation results:
+INFO:rasa_nlu.test:Intent Evaluation: Only considering those 25 examples that have a defined intent out of 25 examples
+INFO:rasa_nlu.test:F1-Score:  1.0
+INFO:rasa_nlu.test:Precision: 1.0
+INFO:rasa_nlu.test:Accuracy:  1.0
+INFO:rasa_nlu.test:Classification report: 
+              precision    recall  f1-score   support
+
+         bye       1.00      1.00      1.00         3
+    fine_ask       1.00      1.00      1.00         3
+ fine_normal       1.00      1.00      1.00         4
+       greet       1.00      1.00      1.00         4
+        news       1.00      1.00      1.00         9
+      thanks       1.00      1.00      1.00         2
+
+   micro avg       1.00      1.00      1.00        25
+   macro avg       1.00      1.00      1.00        25
+weighted avg       1.00      1.00      1.00        25
+
+INFO:rasa_nlu.test:Your model made no errors
+INFO:rasa_nlu.test:Entity evaluation results:
+INFO:rasa_nlu.test:Evaluation for entity extractor: CRFEntityExtractor 
+INFO:rasa_nlu.test:F1-Score:  1.0
+INFO:rasa_nlu.test:Precision: 1.0
+INFO:rasa_nlu.test:Accuracy:  1.0
+INFO:rasa_nlu.test:Classification report: 
+              precision    recall  f1-score   support
+
+    category       1.00      1.00      1.00         9
+   no_entity       1.00      1.00      1.00        87
+
+   micro avg       1.00      1.00      1.00        96
+   macro avg       1.00      1.00      1.00        96
+weighted avg       1.00      1.00      1.00        96
+
+INFO:rasa_nlu.training_data.loading:Training data format of ./data/nlu.md is md
+INFO:rasa_nlu.training_data.training_data:Training data stats: 
+	- intent examples: 25 (6 distinct intents)
+	- Found intents: 'thanks', 'news', 'fine_normal', 'fine_ask', 'bye', 'greet'
+	- entity examples: 9 (1 distinct entities)
+	- found entities: 'category'
+
+WARNING:rasa_nlu.config:You have specified the pipeline template 'tensorflow_embedding' which has been renamed to 'supervised_embeddings'. Please update your code as it will no longer work with future versions of Rasa NLU.
+DEBUG:rasa_nlu.training_data.training_data:Validating training data...
+INFO:rasa_nlu.model:Starting to train component WhitespaceTokenizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component RegexFeaturizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component CRFEntityExtractor
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component EntitySynonymMapper
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component CountVectorsFeaturizer
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Starting to train component EmbeddingIntentClassifier
+DEBUG:rasa_nlu.classifiers.embedding_intent_classifier:Check if num_neg 20 is smaller than number of intents 6, else set num_neg to the number of intents - 1
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\rasa_nlu\classifiers\embedding_intent_classifier.py:285: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dense instead.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\rasa_nlu\classifiers\embedding_intent_classifier.py:286: dropout (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dropout instead.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\keras\layers\core.py:143: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\ops\math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\ops\math_grad.py:102: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+INFO:rasa_nlu.classifiers.embedding_intent_classifier:Accuracy is updated every 10 epochs
+INFO:rasa_nlu.classifiers.embedding_intent_classifier:Finished training embedding classifier, loss=0.097, train accuracy=1.000
+INFO:rasa_nlu.model:Finished training component.
+INFO:rasa_nlu.model:Successfully saved model into 'D:\QuanHong\rasa\bot2-python\models\current\nlu'
+WARNING:tensorflow:From c:\users\admin\envs\rasa-env\lib\site-packages\tensorflow\python\training\saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+INFO:tensorflow:Restoring parameters from D:\QuanHong\rasa\bot2-python\./models\current\nlu\component_5_EmbeddingIntentClassifier.ckpt
+INFO:rasa_nlu.training_data.loading:Training data format of ./data/nlu.md is md
+INFO:rasa_nlu.training_data.training_data:Training data stats: 
+	- intent examples: 25 (6 distinct intents)
+	- Found intents: 'thanks', 'news', 'fine_normal', 'fine_ask', 'bye', 'greet'
+	- entity examples: 9 (1 distinct entities)
+	- found entities: 'category'
+
+INFO:rasa_nlu.test:Running model for predictions:
+INFO:rasa_nlu.test:Intent evaluation results:
+INFO:rasa_nlu.test:Intent Evaluation: Only considering those 25 examples that have a defined intent out of 25 examples
+INFO:rasa_nlu.test:F1-Score:  1.0
+INFO:rasa_nlu.test:Precision: 1.0
+INFO:rasa_nlu.test:Accuracy:  1.0
+INFO:rasa_nlu.test:Classification report: 
+              precision    recall  f1-score   support
+
+         bye       1.00      1.00      1.00         3
+    fine_ask       1.00      1.00      1.00         3
+ fine_normal       1.00      1.00      1.00         4
+       greet       1.00      1.00      1.00         4
+        news       1.00      1.00      1.00         9
+      thanks       1.00      1.00      1.00         2
+
+   micro avg       1.00      1.00      1.00        25
+   macro avg       1.00      1.00      1.00        25
+weighted avg       1.00      1.00      1.00        25
+
+INFO:rasa_nlu.test:Your model made no errors
+INFO:rasa_nlu.test:Entity evaluation results:
+INFO:rasa_nlu.test:Evaluation for entity extractor: CRFEntityExtractor 
+INFO:rasa_nlu.test:F1-Score:  1.0
+INFO:rasa_nlu.test:Precision: 1.0
+INFO:rasa_nlu.test:Accuracy:  1.0
+INFO:rasa_nlu.test:Classification report: 
+              precision    recall  f1-score   support
+
+    category       1.00      1.00      1.00         9
+   no_entity       1.00      1.00      1.00        87
+
+   micro avg       1.00      1.00      1.00        96
+   macro avg       1.00      1.00      1.00        96
+weighted avg       1.00      1.00      1.00        96
+
+INFO:tensorflow:Restoring parameters from ./models/current/nlu\component_5_EmbeddingIntentClassifier.ckpt
